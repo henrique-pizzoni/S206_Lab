@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-20T01:51:13.334Z",
+    "end": "2025-06-20T01:51:24.963Z",
+    "duration": 11629,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "581a9d88-875b-4325-b733-ffe494ae2eb5",
+      "title": "",
+      "fullFile": "cypress\\e2e\\prova_e2e.cy.js",
+      "file": "cypress\\e2e\\prova_e2e.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e86017a0-86e4-4252-af11-65980c0bffb6",
+          "title": "Testes E2E - Site Saucedemo - Prova",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Teste positivo - Conferir se adiciona ao carrinho ao escolher produto",
+              "fullTitle": "Testes E2E - Site Saucedemo - Prova Teste positivo - Conferir se adiciona ao carrinho ao escolher produto",
+              "timedOut": null,
+              "duration": 3407,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "visitarSite();\nlogin('standard_user', 'secret_sauce');\ncy.get('[data-test=\"add-to-cart-sauce-labs-backpack\"]').click();\ncy.get('[data-test=\"shopping-cart-badge\"]').should(\"contain.text\", \"1\");",
+              "err": {},
+              "uuid": "5906837f-f073-4a8e-a032-686cdb5d44d5",
+              "parentUUID": "e86017a0-86e4-4252-af11-65980c0bffb6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Teste negativo - Credenciais inválidas ao fazer login no site",
+              "fullTitle": "Testes E2E - Site Saucedemo - Prova Teste negativo - Credenciais inválidas ao fazer login no site",
+              "timedOut": null,
+              "duration": 2089,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "visitarSite();\nlogin('standard_user', 'chrislima');\ncy.get('[data-test=\"error\"]').should(\"contain.text\", \"Epic sadface: Username and password do not match any user in this service\");",
+              "err": {},
+              "uuid": "265d656c-5738-482d-a572-51a246772fcc",
+              "parentUUID": "e86017a0-86e4-4252-af11-65980c0bffb6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Teste positivo - Experiência de compra completa",
+              "fullTitle": "Testes E2E - Site Saucedemo - Prova Teste positivo - Experiência de compra completa",
+              "timedOut": null,
+              "duration": 2597,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "visitarSite();\nlogin('standard_user', 'secret_sauce');\ncy.get('[data-test=\"add-to-cart-sauce-labs-backpack\"]').click();\ncy.get('[data-test=\"shopping-cart-link\"]').click();\ncy.get('[data-test=\"checkout\"]').click();\ncy.get('[data-test=\"firstName\"]').type(\"John\");\ncy.get('[data-test=\"lastName\"]').type(\"Wick\");\ncy.get('[data-test=\"postalCode\"]').type(\"9999\");\ncy.get('[data-test=\"continue\"]').click();\ncy.get('[data-test=\"finish\"]').click();\ncy.get('[data-test=\"complete-header\"]').should(\"contain.text\", \"Thank you for your order!\");",
+              "err": {},
+              "uuid": "782e2cd7-25f1-4508-aa19-12a3ca3d39d3",
+              "parentUUID": "e86017a0-86e4-4252-af11-65980c0bffb6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5906837f-f073-4a8e-a032-686cdb5d44d5",
+            "265d656c-5738-482d-a572-51a246772fcc",
+            "782e2cd7-25f1-4508-aa19-12a3ca3d39d3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8093,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
